@@ -57,11 +57,18 @@ class Tree
 end
 
 fam_hash = {'grandpa' => { 'dad' => {'child 1' => {}, 'child 2' => {} }, 'uncle' => {'child 3' => {}, 'child 4' => {} } } }
-
 family_tree = Tree.from_hash(fam_hash)
-
 puts "*"*20
 family_tree.visit {|node| puts node.node_name}
 puts "*"*20
 family_tree.visit_all {|node| puts node.node_name}
+
+# part 3
+
+file = File.read(File.join(File.dirname(__FILE__), 'sample.txt'))
+i = 0
+file.each_line do |line|
+  i = i + 1
+  puts "#{i}: #{line}" if line.match('words')
+end
 

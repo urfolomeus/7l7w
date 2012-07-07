@@ -1,0 +1,12 @@
+Hello,
+
+This is a test file that contains
+test data that will be used for
+the purposes of
+testing a simple grep.
+
+Some lines will contain words
+that are duplicated on
+other lines. Some will have
+words that do not appear on other
+lines.
