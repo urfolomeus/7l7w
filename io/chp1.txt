@@ -1,0 +1,35 @@
+It would certainly appear that Io is strongly typed as a type error was thrown when doing 1 + "one".
+
+Io> true and 0
+==> true
+Io> true and nil
+==> false
+Io> true and ""
+==> true
+
+Io> Car := Object clone
+==>  Car_0x271a70:
+type             = "Car"
+
+Io> Car description := "Vehicle"
+==> Vehicle
+Io> SportsCar := Car clone
+==>  SportsCar_0x288740:
+type             = "SportsCar"
+
+Io> SportsCar color := "red"
+==> red
+Io> Car slotNames
+==> list(description, type)
+Io> SportsCar slotNames
+==> list(type, color)
+Io> SportsCar proto slotNames
+==> list(description, type)
+
+= assigns a new value to an existing slot
+:= will create a slot if it doesn't already exist and then assign to it
+::= creates accessor methods <name> and set<Name> so you can call Thing.setValue("test") and Thing.value => "test"
+
+
+
+
