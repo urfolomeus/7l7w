@@ -1,10 +1,13 @@
-puts "Hello, world."
+puts "Hello, world.\n"
 
 puts "Hello, Ruby".index('Ruby')
+puts ""
 
 10.times { puts "Alan Gardner" }
+puts ""
 
 10.times {|n| puts "This is sentence #{n+1}"}
+puts ""
 
 class RandomGuesser
   def initialize(ceiling=10)
@@ -32,13 +35,14 @@ class RandomGuesser
 
   def results_lookup
     {
-      -1 => Proc.new { puts "too low" },
-      0  => Proc.new { puts "yay!"; exit },
-      1  => Proc.new { puts "too high" }
+      -1=>->{puts"too low"},
+      0=>->{puts"yay!";exit},
+      1=>->{puts"too high"}
     }
   end
 end
 
+puts "Random Guesser"
 game = RandomGuesser.new
 game.play
 

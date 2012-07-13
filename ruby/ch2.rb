@@ -65,6 +65,7 @@ family_tree.visit_all {|node| puts node.node_name}
 
 # part 3
 
+puts "*"*20
 file = File.read(File.join(File.dirname(__FILE__), 'sample.txt'))
 i = 0
 file.each_line do |line|
