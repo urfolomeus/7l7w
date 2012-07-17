@@ -77,9 +77,7 @@ a := list(1,2,3,4)
 b := list(5,6,7,8)
 c := list(a,b)
 
-total := 0
-
-c foreach(array, total = total + (array sum))
+total := c reduce(a,b,(a sum) + (b sum))
 
 writeln("Total sum of ", c, " = ", total)
 
